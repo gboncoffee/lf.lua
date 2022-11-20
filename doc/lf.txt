@@ -1,0 +1,53 @@
+*lf.txt* lf.lua
+
+lf.lua - stupid Lf wrapper for Vim
+
+Author: Gabriel G. de Brito gabrielgbrito@icloud.com
+Version: 1.0
+Homepage: github.com/gboncoffee/lf.lua
+License: MIT
+
+==============================================================================
+INTRODUCTION                                                           *lf.vim*
+
+Lf.lua is a simple and stupid plugin to open the Lf file manager inside Neovim
+and using it to change the Neovim `cwd` and selecting files. It's implemented in
+Lua.
+
+NOTE: Of course, the plugin will not work if you don't have the Lf file
+manager installed. See their GitHub page for information on their side:
+https://github.com/gokcehan/lf
+
+==============================================================================
+USAGE                                                            *lf.vim-usage*
+
+The plugin implements three new commands: the main one is |Lf|, used to open
+Lf inside the default Neovim |terminal|, in a floating window. After selecting 
+a file, it'll open inside the current Neovim window. If the variable 
+|g:lf_change_cwd| is setted to 1, it'll also change the Vim `cwd` to the last
+directory of Lf.
+
+==============================================================================
+COMMANDS                                                      *lf.vim-commands*
+
+*Lf*
+Opens Lf inside a |terminal|.
+
+*LfChangeCwd*
+Same, but will change the Neovim `cwd` anyway, ignoring the |g:lf_change_cwd|
+variable.
+
+*LfNoChangeCwd*
+Same, but will NOT change the Neovim `cwd`, ignoring the |g:lf_change_cwd|
+variable.
+
+==============================================================================
+SETTINGS                                                      *lf.vim-settings*
+    >
+    require "lf".setup {
+        default_cwd    = false, -- true or false, defaults false
+        change_cwd_cmd = "cd",  -- Neovim command to change cwd ("cd", "tcd", "lcd")
+    }
+
+------------------------------------------------------------------------------
+vim:tw=78:ts=4:ft=help:norl: 
