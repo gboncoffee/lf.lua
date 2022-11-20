@@ -66,11 +66,4 @@ M.lf = function(change, path) -- {{{
     vim.cmd("normal a")
 end -- }}}
 
-M.lf_check_dir = function(dir)
-    if vim.fn.isdirectory(dir) == 0 then
-        return
-    end
-    M.lf(g._lf_config.default_cwd)
-end
-
 return M
