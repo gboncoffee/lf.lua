@@ -15,22 +15,22 @@ g._lf_config = {
 }
 
 -- commands
-command("Lf", function()
-    require "lf".lf(g._lf_config.default_cwd)
+command("Lf", function(args)
+    require "lf".lf(g._lf_config.default_cwd, args.args)
 end, {
     complete = "file",
     nargs = "*",
 })
 
-command("LfNoChangeCwd", function()
-    require "lf".lf(false)
+command("LfNoChangeCwd", function(args)
+    require "lf".lf(false, args.args)
 end, {
     complete = "file",
     nargs = "*",
 })
 
-command("LfChangeCwd", function() 
-    require "lf".lf(true)
+command("LfChangeCwd", function(args)
+    require "lf".lf(true, args.args)
 end, {
     complete = "file",
     nargs = "*",

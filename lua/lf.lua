@@ -39,7 +39,7 @@ end
 
 M.lf = function(change, path) -- {{{
     if not path then path = "" end
-    lf_cmd = "lf -last-dir-path /tmp/lfvim-lastdir -selection-path /tmp/lfvim-selection " .. path
+    local lf_cmd = "lf -last-dir-path /tmp/lfvim-lastdir -selection-path /tmp/lfvim-selection " .. path
 
     -- we need to be sure that theese files aren't there
     os.remove("/tmp/lfvim-lastdir")
