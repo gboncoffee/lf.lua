@@ -1,6 +1,6 @@
 *lf.txt* lf.lua
 
-lf.lua - stupid Lf wrapper for Vim
+lf.lua - stupid Lf wrapper for Neovim
 
 Author: Gabriel G. de Brito gabrielgbrito@icloud.com
 Version: 1.0
