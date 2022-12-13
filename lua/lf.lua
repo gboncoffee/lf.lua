@@ -33,7 +33,7 @@ end -- }}}
 
 M.setup = function(opts)
     for key, value in pairs(opts) do
-        g._lf_config.key = value
+        g._lf_config[key] = value
     end
 end
 
