@@ -54,7 +54,7 @@ M.lf = function(change, path) -- {{{
         height   = math.ceil(vim.o.lines   * 0.75 - 2),
         border   = "rounded"
     })
-    vim.cmd("term " .. lf_cmd)
+    vim.fn.termopen(lf_cmd)
     vim.bo.bufhidden = "wipe"
 
     v.nvim_create_autocmd({ "TermClose" }, {
